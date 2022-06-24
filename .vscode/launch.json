@@ -1,0 +1,38 @@
+{
+    "version":"0.2.0",
+    "configurations":[
+        {
+            "name": "Attach",
+            "port": 9229,
+            "request": "attach",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+        
+        {
+            "type":"node",
+            "name":"jest debugger",
+            "request":"launch",
+            "program":"${workspaceRoot}/node_modules/.bin/jest",
+            "stopOnEntry":false,
+            "args":[
+                "--debug-brk",
+                "--runInBand",
+                "--watch",
+                "--forceExit",
+                "--verbose",
+            ],
+            "runtimeArgs":[
+                "--inspect-brk"
+            ],
+            "cwd":"${workspaceRoot}",
+            "sourceMaps":true,
+            "console":"integratedTerminal",
+            "outFiles": [
+                "${workspaceRoot}/dist/*.js"
+            ],
+        }
+    ]
+}

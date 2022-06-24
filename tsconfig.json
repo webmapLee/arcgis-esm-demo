@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "preserve",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "target": "es6",
+    "module": "esnext",
+    "lib": ["dom", "esnext"],
+    "sourceMap": true,
+    "importHelpers": true,
+    "declaration": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "paths": {
+      "@/*": ["src/*"],
+    }
+  },
+  "include": ["src", "__tests__"],
+  "exclude": ["node_modules", "build"]
+}

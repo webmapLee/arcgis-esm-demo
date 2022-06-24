@@ -1,0 +1,12 @@
+build
+coverage
+dist
+bin
+node_modules
+tests
+*.log
+.eslintrc.js
+*.config.js
+_mock
+package.json
+stats.json
